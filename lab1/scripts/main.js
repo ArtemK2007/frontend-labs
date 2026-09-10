@@ -1,4 +1,3 @@
-// TODO: налаштуйте власні дані
 const studentName = "Крячко Артем";
 const group = "ІН-41/2";
 const emoji = "🙂";
@@ -25,14 +24,22 @@ function setAccentPreview() {
     }
 }
 
+function setCurrentYear() {
+    const yearEl = document.getElementById("currentYear");
+    if (yearEl) {
+        yearEl.textContent = String(new Date().getFullYear());
+    }
+}
+
 function helloConsole(id) {
-    console.log(`${emoji} Вітаю! Це моя ЛР1. Студент(ка): ${studentName}, група: ${group}. Унікальний ID: ${id}`);
+    console.log(`${emoji} Вітаю! Це моя ЛР1. Студент: ${studentName}, група: ${group}. Унікальний ID: ${id}`);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const id = generatePageId();
     setBadge(id);
     setAccentPreview();
+    setCurrentYear();
 
     try {
         localStorage.setItem("lab1.pageId", id);
