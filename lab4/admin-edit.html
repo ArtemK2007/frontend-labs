@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редагування: Night Visions - Адміністрування каталогу</title>
+    <meta name="description" content="Форма редагування параметрів музичного альбому Night Visions у каталозі.">
+    <link rel="icon" href="./favicon.ico">
+</head>
+<body>
+<header>
+    <p><strong>Каталог музичних альбомів</strong></p>
+    <p>Автор: Крячко Артем Костянтинович, група ІН-41/2</p>
+    <nav aria-label="Основна навігація">
+        <ul>
+            <li><a href="./index.html">Каталог</a></li>
+            <li><a href="./about.html">Про проєкт</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <nav aria-label="Хлібні крихти">
+        <ol>
+            <li><a href="./admin.html">Адміністрування</a></li>
+            <li aria-current="page">Редагування: Night Visions</li>
+        </ol>
+    </nav>
+
+    <h1>Редагування альбому: Night Visions</h1>
+    <p>Змініть необхідні поля та збережіть оновлення. Кнопка «Скасувати зміни» повертає форму до початкових значень цього запису.</p>
+
+    <form id="edit-album-form" action="./admin.html" method="get">
+        <input type="hidden" name="id" value="album-1">
+
+        <fieldset>
+            <legend>Основні дані альбому</legend>
+
+            <p>
+                <label for="edit-title">Назва альбому</label>
+                <input id="edit-title" name="title" type="text" value="Night Visions" required minlength="2" maxlength="100" aria-describedby="edit-title-hint">
+            </p>
+            <p id="edit-title-hint">Обов'язкове поле, від 2 до 100 символів.</p>
+
+            <p>
+                <label for="edit-code">Код релізу (артикул)</label>
+                <input id="edit-code" name="catalogCode" type="text" value="AL-001" required pattern="[A-Z]{2}-\d{3}" aria-describedby="edit-code-hint">
+            </p>
+            <p id="edit-code-hint">Формат: дві великі латинські літери, дефіс і три цифри, наприклад AL-001.</p>
+
+            <p>
+                <label for="edit-artist">Виконавець</label>
+                <input id="edit-artist" name="artist" type="text" list="edit-artists-list" value="Imagine Dragons" required minlength="2" maxlength="80" aria-describedby="edit-artist-hint">
+                <datalist id="edit-artists-list">
+                    <option value="Imagine Dragons"></option>
+                    <option value="Coldplay"></option>
+                    <option value="Yarmak"></option>
+                    <option value="Daft Punk"></option>
+                </datalist>
+            </p>
+            <p id="edit-artist-hint">Оберіть виконавця зі списку підказок або введіть власний варіант.</p>
+
+            <p>
+                <label for="edit-genre">Жанр</label>
+                <select id="edit-genre" name="genre" required>
+                    <option value="">Оберіть жанр</option>
+                    <option value="alt-rock" selected>Альтернативний рок</option>
+                    <option value="pop-rock">Поп-рок</option>
+                    <option value="hip-hop">Хіп-хоп / Реп</option>
+                    <option value="electronic">Електронна музика</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Деталі випуску та обкладинка</legend>
+
+            <p>
+                <label for="edit-year">Рік випуску</label>
+                <input id="edit-year" name="releaseYear" type="number" value="2012" min="1950" max="2026" step="1" required aria-describedby="edit-year-hint">
+            </p>
+            <p id="edit-year-hint">Ціле число від 1950 до 2026.</p>
+
+            <p>
+                <label for="edit-tracks">Кількість треків</label>
+                <input id="edit-tracks" name="trackCount" type="number" value="11" min="1" max="100" step="1" required aria-describedby="edit-tracks-hint">
+            </p>
+            <p id="edit-tracks-hint">Ціле число від 1 до 100.</p>
+
+            <p>
+                <label for="edit-date">Дата релізу</label>
+                <input id="edit-date" name="releaseDate" type="date" value="2012-09-04" min="1950-01-01" max="2026-12-31" required aria-describedby="edit-date-hint">
+            </p>
+            <p id="edit-date-hint">Дата у межах від 1950-01-01 до 2026-12-31.</p>
+
+            <p>
+                <label for="edit-cover">Замінити обкладинку альбому</label>
+                <input id="edit-cover" name="coverFile" type="file" accept="image/webp,image/jpeg,image/png" aria-describedby="edit-cover-hint">
+            </p>
+            <p id="edit-cover-hint">Поточний файл: night-visions-800w.webp. Завантажте новий файл формату WebP, JPEG або PNG, якщо потрібно змінити обкладинку.</p>
+
+            <p>
+                <label for="edit-description">Короткий опис</label>
+                <textarea id="edit-description" name="description" rows="4" cols="40" maxlength="500" aria-describedby="edit-description-hint">Дебютний студійний альбом американського поп-рок та інді-рок гурту Imagine Dragons, випущений лейблом Interscope Records.</textarea>
+            </p>
+            <p id="edit-description-hint">Необов'язково. До 500 символів.</p>
+
+            <p>
+                <label for="edit-favorite">
+                    <input id="edit-favorite" name="inFavorites" type="checkbox" value="yes" checked>
+                    Є у вибраній колекції
+                </label>
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit">Зберегти зміни</button>
+            <button type="reset">Скасувати зміни</button>
+        </p>
+    </form>
+
+    <p><a href="./admin.html">&larr; Повернутися до адміністрування</a></p>
+</main>
+
+<footer>
+    <p><a href="./admin.html">Адміністрування каталогу</a></p>
+    <p>&copy; 2026 Крячко Артем Костянтинович (Група ІН-41/2). Усі права захищено.</p>
+    <p>Зв'язок: <a href="mailto:artemkryachko2007@gmail.com">artemkryachko2007@gmail.com</a></p>
+</footer>
+</body>
+</html>
