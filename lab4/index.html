@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог музичних альбомів - Крячко Артем</title>
+    <meta name="description" content="Головна сторінка каталогу музичних альбомів із фільтрацією за жанрами та переходом до детального опису релізів.">
+    <link rel="icon" href="./favicon.ico">
+</head>
+<body>
+<header>
+    <h1>Каталог музичних альбомів</h1>
+    <p>Автор: Крячко Артем Костянтинович, група ІН-41/2</p>
+    <nav aria-label="Основна навігація">
+        <ul>
+            <li><a href="./index.html" aria-current="page">Каталог</a></li>
+            <li><a href="./about.html">Про проєкт</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="filters">
+        <h2>Фільтрація та пошук</h2>
+        <form action="#" method="GET">
+            <label for="genre-select">Оберіть жанр:</label>
+            <select id="genre-select" name="genre">
+                <option value="all">Усі жанри</option>
+                <option value="alt-rock">Альтернативний рок</option>
+                <option value="pop-rock">Поп-рок</option>
+                <option value="hip-hop">Хіп-хоп / Реп</option>
+                <option value="electronic">Електронна музика</option>
+            </select>
+            <button type="submit">Застосувати</button>
+        </form>
+    </section>
+
+    <section id="catalog">
+        <h2>Колекція альбомів</h2>
+        <ul>
+            <li>
+                <article>
+                    <h3><a href="./details.html">Night Visions</a></h3>
+                    <img
+                            src="./assets/img/night-visions-800w.jpg"
+                            srcset="./assets/img/night-visions-400w.jpg 400w, ./assets/img/night-visions-800w.jpg 800w"
+                            sizes="(max-width: 600px) 400px, 800px"
+                            alt="Обкладинка альбому Night Visions гурту Imagine Dragons"
+                            title="Imagine Dragons - Night Visions"
+                            fetchpriority="high">
+                    <p><strong>Виконавець:</strong> Imagine Dragons</p>
+                    <p><strong>Жанр:</strong> Альтернативний рок</p>
+                    <p><strong>Рік випуску:</strong> <time datetime="2012-09-04">2012</time></p>
+                    <p><strong>Кількість треків:</strong> <data value="11">11</data></p>
+                    <p><strong>Опис:</strong> Дебютний студійний альбом американського рок-гурту, який приніс їм світову популярність завдяки хітам «Radioactive» та «Demons».</p>
+                </article>
+            </li>
+
+            <li>
+                <article>
+                    <h3><a href="./details.html">A Head Full of Dreams</a></h3>
+                    <img
+                            src="./assets/img/head-full-of-dreams-800w.jpg"
+                            srcset="./assets/img/head-full-of-dreams-400w.jpg 400w, ./assets/img/head-full-of-dreams-800w.jpg 800w"
+                            sizes="(max-width: 600px) 400px, 800px"
+                            alt="Обкладинка альбому A Head Full of Dreams гурту Coldplay"
+                            title="Coldplay - A Head Full of Dreams"
+                            loading="lazy">
+                    <p><strong>Виконавець:</strong> Coldplay</p>
+                    <p><strong>Жанр:</strong> Поп-рок</p>
+                    <p><strong>Рік випуску:</strong> <time datetime="2015-12-04">2015</time></p>
+                    <p><strong>Кількість треків:</strong> <data value="11">11</data></p>
+                    <p><strong>Опис:</strong> Сьомий студійний альбом британського гурту, що вирізняється яскравим звучанням та позитивною атмосферою.</p>
+                </article>
+            </li>
+
+            <li>
+                <article>
+                    <h3><a href="./details.html">Evolve</a></h3>
+                    <img
+                            src="./assets/img/evolve-800w.jpg"
+                            srcset="./assets/img/evolve-400w.jpg 400w, ./assets/img/evolve-800w.jpg 800w"
+                            sizes="(max-width: 600px) 400px, 800px"
+                            alt="Обкладинка альбому Evolve гурту Imagine Dragons"
+                            title="Imagine Dragons - Evolve"
+                            loading="lazy">
+                    <p><strong>Виконавець:</strong> Imagine Dragons</p>
+                    <p><strong>Жанр:</strong> Поп-рок</p>
+                    <p><strong>Рік випуску:</strong> <time datetime="2017-06-23">2017</time></p>
+                    <p><strong>Кількість треків:</strong> <data value="11">11</data></p>
+                    <p><strong>Опис:</strong> Третій студійний альбом гурту з динамічним електронним та роковим звучанням, що містить треки «Believer» і «Thunder».</p>
+                </article>
+            </li>
+
+            <li>
+                <article>
+                    <h3><a href="./details.html">Restart</a></h3>
+                    <img
+                            src="./assets/img/restart-800w.jpg"
+                            srcset="./assets/img/restart-400w.jpg 400w, ./assets/img/restart-800w.jpg 800w"
+                            sizes="(max-width: 600px) 400px, 800px"
+                            alt="Обкладинка альбому Restart виконавця Yarmak"
+                            title="Yarmak - Restart"
+                            loading="lazy">
+                    <p><strong>Виконавець:</strong> Yarmak</p>
+                    <p><strong>Жанр:</strong> Хіп-хоп / Реп</p>
+                    <p><strong>Рік випуску:</strong> <time datetime="2017-04-07">2017</time></p>
+                    <p><strong>Кількість треків:</strong> <data value="16">16</data></p>
+                    <p><strong>Опис:</strong> Четвертий студійний альбом українського реп-виконавця, що поєднує соціальну лірику, потужні біти та треки українською й російською мовами.</p>
+                </article>
+            </li>
+
+            <li>
+                <article>
+                    <h3><a href="./details.html">Parachutes</a></h3>
+                    <img
+                            src="./assets/img/parachutes-800w.jpg"
+                            srcset="./assets/img/parachutes-400w.jpg 400w, ./assets/img/parachutes-800w.jpg 800w"
+                            sizes="(max-width: 600px) 400px, 800px"
+                            alt="Обкладинка альбому Parachutes гурту Coldplay з жовтим глобусом"
+                            title="Coldplay - Parachutes"
+                            loading="lazy">
+                    <p><strong>Виконавець:</strong> Coldplay</p>
+                    <p><strong>Жанр:</strong> Альтернативний рок</p>
+                    <p><strong>Рік випуску:</strong> <time datetime="2000-07-10">2000</time></p>
+                    <p><strong>Кількість треків:</strong> <data value="10">10</data></p>
+                    <p><strong>Опис:</strong> Дебютний альбом, який заклав основу меланхолійного та мелодійного стилю гурту, зокрема завдяки пісні «Yellow».</p>
+                </article>
+            </li>
+
+            <li>
+                <article>
+                    <h3><a href="./details.html">Random Access Memories</a></h3>
+                    <img
+                            src="./assets/img/ram-800w.jpg"
+                            srcset="./assets/img/ram-400w.jpg 400w, ./assets/img/ram-800w.jpg 800w"
+                            sizes="(max-width: 600px) 400px, 800px"
+                            alt="Обкладинка альбому Random Access Memories дуету Daft Punk"
+                            title="Daft Punk - Random Access Memories"
+                            loading="lazy">
+                    <p><strong>Виконавець:</strong> Daft Punk</p>
+                    <p><strong>Жанр:</strong> Електронна музика</p>
+                    <p><strong>Рік випуску:</strong> <time datetime="2013-05-17">2013</time></p>
+                    <p><strong>Кількість треків:</strong> <data value="13">13</data></p>
+                    <p><strong>Опис:</strong> Культовий альбом французького електронного дуету, записаний із залученням живих інструментів та запрошених вокалістів.</p>
+                </article>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p><a href="./admin.html">Адміністрування каталогу</a></p>
+    <p>&copy; 2026 Крячко Артем Костянтинович (Група ІН-41/2). Усі права захищено.</p>
+    <p>Зв'язок: <a href="mailto:artemkryachko2007@gmail.com">artemkryachko2007@gmail.com</a></p>
+</footer>
+</body>
+</html>
