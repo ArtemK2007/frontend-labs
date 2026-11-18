@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Night Visions - Деталі альбому - Каталог музичних альбомів</title>
-    <meta name="description" content="Детальна інформація, характеристики та повний трекліст дебютного альбому Night Visions гурту Imagine Dragons.">
+    <meta name="description" content="Детальна інформація, характеристики, повний трекліст та форма відгуку для альбому Night Visions гурту Imagine Dragons.">
     <link rel="icon" href="./favicon.ico">
 </head>
 <body>
@@ -35,6 +35,7 @@
             <li><a href="#description">Опис альбому</a></li>
             <li><a href="#specs">Характеристики</a></li>
             <li><a href="#tracklist">Трекліст</a></li>
+            <li><a href="#review-section">Залишити відгук</a></li>
         </ul>
     </nav>
 
@@ -156,6 +157,73 @@
             </tr>
             </tbody>
         </table>
+    </section>
+
+    <section id="review-section" aria-labelledby="review-heading">
+        <h2 id="review-heading">Залишити відгук про альбом</h2>
+        <p>Поділіться враженнями від прослуховування релізу. Форма надсилається методом GET для навчальної перевірки переданих параметрів.</p>
+
+        <form id="review-form" action="./details.html" method="get">
+            <p>
+                <label for="reviewer-name">Ваше ім'я</label>
+                <input id="reviewer-name" name="reviewerName" type="text" autocomplete="name" required minlength="2" maxlength="60">
+            </p>
+
+            <p>
+                <label for="reviewer-email">Електронна пошта</label>
+                <input id="reviewer-email" name="reviewerEmail" type="email" autocomplete="email" required>
+            </p>
+
+            <p>
+                <label for="reviewer-phone">Телефон</label>
+                <input id="reviewer-phone" name="reviewerPhone" type="tel" autocomplete="tel" pattern="\+380\d{9}" aria-describedby="reviewer-phone-hint">
+            </p>
+            <p id="reviewer-phone-hint">Необов'язково. Формат: +380 і 9 цифр, наприклад +380501112233.</p>
+
+            <fieldset>
+                <legend>Оцінка альбому</legend>
+                <label><input type="radio" name="rating" value="1" required> 1</label>
+                <label><input type="radio" name="rating" value="2"> 2</label>
+                <label><input type="radio" name="rating" value="3"> 3</label>
+                <label><input type="radio" name="rating" value="4"> 4</label>
+                <label><input type="radio" name="rating" value="5"> 5</label>
+            </fieldset>
+
+            <p>
+                <label for="favorite-track">Улюблений трек з альбому</label>
+                <select id="favorite-track" name="favoriteTrack" required>
+                    <option value="">Оберіть композицію</option>
+                    <option value="radioactive">1. Radioactive</option>
+                    <option value="tiptoe">2. Tiptoe</option>
+                    <option value="its-time">3. It's Time</option>
+                    <option value="demons">4. Demons</option>
+                    <option value="on-top-of-the-world">5. On Top of the World</option>
+                    <option value="amsterdam">6. Amsterdam</option>
+                    <option value="hear-me">7. Hear Me</option>
+                    <option value="every-night">8. Every Night</option>
+                    <option value="bleeding-out">9. Bleeding Out</option>
+                    <option value="underdog">10. Underdog</option>
+                    <option value="nothing-left-to-say">11. Nothing Left to Say / Rocks</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="review-comment">Коментар</label>
+                <textarea id="review-comment" name="comment" rows="4" cols="40" minlength="10" maxlength="500" aria-describedby="review-comment-hint"></textarea>
+            </p>
+            <p id="review-comment-hint">Необов'язково. Якщо пишете коментар, залиште від 10 до 500 символів.</p>
+
+            <p>
+                <label for="review-agree">
+                    <input id="review-agree" name="agreeRules" type="checkbox" value="yes" required>
+                    Погоджуюся з правилами публікації відгуку
+                </label>
+            </p>
+
+            <p>
+                <button type="submit">Надіслати відгук</button>
+            </p>
+        </form>
     </section>
 
     <p><a href="./index.html">&larr; Повернутися до каталогу альбомів</a></p>
